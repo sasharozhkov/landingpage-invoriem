@@ -1,0 +1,118 @@
+$text: #114455;
+$white: #ffffff;
+$bg: #e1edf2;
+$sub: #1f1f1f;
+
+@mixin ff {
+  font-family: "Inter", sans-serif;
+}
+
+@mixin btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 2px;
+  border: 1px solid $text;
+  transition: color 0.15s ease-in, background-color 0.15s ease-in;
+
+  &:active {
+    top: 1px;
+  }
+}
+
+@mixin title {
+  color: $sub;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 1.2;
+
+  @include _1000 {
+    font-size: 50px;
+  }
+  @include _480 {
+    font-size: 35px;
+  }
+}
+
+@mixin sub {
+  color: $sub;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.6;
+  opacity: 0.7;
+
+  @include _600 {
+    font-size: 20px;
+  }
+  @include _480 {
+    font-size: 18px;
+  }
+}
+
+@mixin text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.8;
+  color: $text;
+
+  @include _480 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+@mixin _1749 {
+  @media (max-width: 1749px) {
+    @content;
+  }
+}
+
+@mixin _1400 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+@mixin _1170 {
+  @media (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin _1120 {
+  @media (max-width: 1120px) {
+    @content;
+  }
+}
+@mixin _1060 {
+  @media (max-width: 1060px) {
+    @content;
+  }
+}
+@mixin _1000 {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin _979 {
+  @media (max-width: 979px) {
+    @content;
+  }
+}
+@mixin _768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin _600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin _480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin _350 {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
