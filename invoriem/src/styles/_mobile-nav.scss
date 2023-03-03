@@ -1,0 +1,130 @@
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 44px 15px 32px 24px;
+  z-index: 99;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 66px;
+  }
+
+  &__logo {
+    max-width: 109px;
+    height: 24px;
+
+    img {
+      max-width: 109px;
+      height: 24px;
+    }
+  }
+
+  &__btn {
+    background: none;
+    margin-right: 1px;
+  }
+
+  .mobile-list {
+    margin-bottom: 80px;
+
+    a {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 1.4;
+      color: $sub;
+    }
+  }
+
+  .mobile-contacts {
+    margin-bottom: 80px;
+
+    a {
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.06em;
+      color: #1f1f1f;
+      opacity: 0.7;
+    }
+
+    &__title {
+      margin-bottom: 32px;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 1.3;
+      color: $sub;
+    }
+
+    &__email {
+      margin-bottom: 16px;
+    }
+
+    &__phone {
+      margin-bottom: 16px;
+    }
+
+    &__developer {
+      height: 25px;
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+  }
+
+  .mobile-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+
+    &__email {
+      display: block;
+      font-size: 16px;
+      line-height: 2;
+      letter-spacing: 0.06em;
+      color: #4a2ad3;
+      opacity: 0.7;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .mobile-socials {
+      display: flex;
+      column-gap: 24px;
+      margin-bottom: 32px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__copyright {
+      display: block;
+      font-size: 14px;
+      line-height: 2;
+      letter-spacing: 0.08em;
+      color: #1f1f1f;
+      opacity: 0.7;
+    }
+  }
+}

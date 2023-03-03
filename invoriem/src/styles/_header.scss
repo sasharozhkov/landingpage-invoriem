@@ -1,0 +1,210 @@
+.header {
+  min-height: 100vh;
+  background-color: $bg;
+  background: url(img/bg.jpg) no-repeat center/cover;
+  position: relative;
+
+  &_top {
+    padding: 44px 0;
+    margin-bottom: 126px;
+
+    @include _600 {
+      margin-bottom: 50px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav_logo {
+        max-width: 139px;
+        height: 24px;
+
+        img {
+          @include _600 {
+            margin-left: 9px;
+            max-width: 109px;
+            height: 24px;
+          }
+        }
+      }
+
+      &_list {
+        display: flex;
+        align-items: center;
+        column-gap: 118px;
+
+        @include _600 {
+          display: none;
+        }
+
+        @include _1000 {
+          column-gap: 40px;
+        }
+
+        .link {
+          @include text;
+        }
+
+        &__translate {
+          position: relative;
+          cursor: pointer;
+
+          .current-lang {
+            @include text;
+          }
+
+          &::before {
+            display: inline;
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            right: 26px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url("img/language.svg") no-repeat center;
+          }
+        }
+
+        .lang {
+          &:hover {
+            .nav_list__languages {
+              display: block;
+              top: 100%;
+              right: -90%;
+            }
+          }
+        }
+
+        &__languages {
+          padding: 10px 15px;
+          border-radius: 6px;
+          background: $white;
+          position: absolute;
+          display: none;
+        }
+
+        &__language {
+          @include text;
+          cursor: pointer;
+          transition: color 0.25s;
+
+          &:hover {
+            color: #ff0000;
+          }
+        }
+
+        .btn {
+          @include btn;
+          @include text;
+          position: relative;
+          padding-right: 72px;
+
+          &:hover,
+          &:focus {
+            background-color: $text;
+            color: $white;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url("img/arrowblack.svg") no-repeat center;
+          }
+
+          &:hover::after {
+            transition: all 0.25s ease-in;
+            background: url("img/arrowwhite.svg") no-repeat center;
+          }
+        }
+      }
+
+      &__btn {
+        display: none;
+        background: none;
+
+        @include _600 {
+          margin-right: 1px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &_title {
+    @include title;
+    color: $text;
+    max-width: 770px;
+    margin-bottom: 48px;
+
+    @include _1000 {
+      margin-bottom: 28px;
+    }
+    @include _480 {
+      margin-bottom: 18px;
+    }
+  }
+
+  &_text {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.57;
+    letter-spacing: -0.02em;
+    margin-bottom: 72px;
+    color: $sub;
+    opacity: 0.7;
+
+    @include _1000 {
+      font-size: 24px;
+      margin-bottom: 52px;
+    }
+    @include _480 {
+      font-size: 18px;
+      margin-bottom: 42px;
+    }
+  }
+
+  &_btn {
+    .btn {
+      @include btn;
+      @include text;
+      background: $text;
+      color: $white;
+      border: none;
+      padding: 14px 24px;
+      position: relative;
+      padding-right: 80px;
+
+      &:hover,
+      &:focus {
+        background-color: $sub;
+        color: $white;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background: url(img/arrowwhite.svg) no-repeat center;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__arrows {
+    position: absolute;
+    bottom: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
